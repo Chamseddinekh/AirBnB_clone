@@ -9,7 +9,7 @@ class BaseModel():
 
 
     def __init__(self, *args, **kwargs):
-        if kwargs:
+        if kwargs is not {}:
             for arg in kwargs:
                 if arg == "created_at":
                     self.created_at = datetime.datetime.strptime(
