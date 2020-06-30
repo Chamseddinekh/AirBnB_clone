@@ -2,7 +2,7 @@
 """ base class for all """
 import uuid
 import datetime
-
+import models
 
 class BaseModel():
     """Basemodel constructor"""
@@ -10,9 +10,8 @@ class BaseModel():
     def __init__(self, *args, **kwargs):
         if kwargs:
             for arg in kwargs:
-                if arg == "created_at":
-                    if arg != "__class__":
-                        self.__dict__[arg] = kwargs[arg]
+                if arg != "__class__":
+                    self.__dict__[arg] = kwargs[arg]
                 self.created_at = datetime.datetime.strptime(
                     self.created_at, "%Y-%m-%dT%H:%M:%S.%f")
                 self.updated_at = datetime.datetime.strptime(
