@@ -6,6 +6,8 @@ import datetime
 
 class BaseModel():
     """Basemodel constructor"""
+
+
     def __init__(self, *args, **kwargs):
         if kwargs:
             for arg in kwargs:
@@ -26,7 +28,8 @@ class BaseModel():
         """
         BaseModel str method
         """
-        
+
+
         return ("{}{}{}".format(type(self).__name__, self.id, self.__dict__))
 
     def save(self):
@@ -34,12 +37,14 @@ class BaseModel():
         public instance attribute updated_at with the current datetime
         """
 
+
         self.updated_at = datetime.datetime.now()
 
     def to_dict(self):
         """
         Method eturns a dictionary containing all keys/values
         """
+
 
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = type(self).__name__
