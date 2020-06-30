@@ -23,15 +23,24 @@ class BaseModel():
             self.updated_at = datetime.datetime.now()
 
     def __str__(self):
-        """BaseModel str method"""
+        """
+        BaseModel str method
+        """
+        
         return ("{}{}{}".format(type(self).__name__, self.id, self.__dict__))
 
     def save(self):
-        """public instance attribute updated_at with the current datetime"""
+        """
+        public instance attribute updated_at with the current datetime
+        """
+
         self.updated_at = datetime.datetime.now()
 
     def to_dict(self):
-        """Method eturns a dictionary containing all keys/values """
+        """
+        Method eturns a dictionary containing all keys/values
+        """
+
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = type(self).__name__
         new_dict['created_at'] = new_dict["created_at"].isoformat()
