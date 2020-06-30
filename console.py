@@ -2,13 +2,13 @@
 """hat contains the entry point of the command interpreter"""
 import cmd
 from models.base_model import BaseModel
-
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """Consol class"""
 
     prompt = '(hbnb)'
-    my_classes = {'BaseModel': BaseModel}
+    my_classes = {'BaseModel': BaseModel, 'User': User}
 
     def do_quit(self, arg):
         """quit console"""
