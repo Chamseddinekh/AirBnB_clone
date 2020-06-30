@@ -3,10 +3,12 @@
 base model test
 """
 import unittest
-from models.base_model import BaseModel
 
 
 class TestBaseModel(unittest.TestCase):
+    """
+    base model test
+    """
     pass
 
 
