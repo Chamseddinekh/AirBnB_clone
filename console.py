@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """hat contains the entry point of the command interpreter"""
+
+
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+
 
 class HBNBCommand(cmd.Cmd):
     """Consol class"""
