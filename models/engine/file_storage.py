@@ -34,3 +34,6 @@ class FileStorage():
             new_dict = value.to_dict()
         with open(FileStorage.__file_path, mode='w', encoding='UTF8') as f:
             json.dump(new_dict, f)
+
+    def reload(self):
+        pass
