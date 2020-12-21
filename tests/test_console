@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""test for console"""
+
+
+class TestConsole(unittest.TestCase):
+    """test the console"""
+
+
+if __name__ == "__main__":
+    unittest.main()
